@@ -1,0 +1,33 @@
+class Categories {
+
+    private String category;
+    private String type;
+    private String product;
+
+    public Categories(String category, String type, String product) {
+        this.category = category;
+        this.type = type;
+        this.product = product;
+    }
+
+    public Categories(String soft, String drink, Product product) {
+    }
+
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
+    public String getType() { return type; }
+    public void setType(String type) { this.type = type; }
+    public String getProduct() { return product; }
+    public void setProduct(String product) { this.product = product;}
+
+    public void whenShallowCopying_thenObjectsShouldNotBeSame() {
+
+        Product product = new Product("1A20", "Pepsi", "USA");
+        Categories AA = new Categories("Soft", "Drink", product);
+
+        Categories shallowCopy = new Categories(
+                AA.getCategory(), AA.getType(), AA.getProduct());
+
+    }
+
+}
