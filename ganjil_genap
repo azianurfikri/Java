@@ -1,5 +1,4 @@
-import java.util.Scanner;
-public class Menentukan_bilangan_ganjil_genap {
+public class ganjil_genap {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
         int bil;
@@ -11,6 +10,5 @@ public class Menentukan_bilangan_ganjil_genap {
         }else {
              System.out.println("Bilangan "+bil+" adalah bilangan ganjil");
         }
-    
   }
 }
